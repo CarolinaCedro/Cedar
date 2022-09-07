@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./Components/Header/Header";
+import {AiFillGithub} from "react-icons/ai";
+import logoIcon from './Assets/logoIcon.svg'
+import { CardSale } from "./Components/CardSale/CardSale";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <section className="logoContainer">
+      <div className="logoContent">
+        <img src={logoIcon}/>
+        <h3>Cedar</h3>
+        <p>Desenvolvido por <AiFillGithub/> <a href="https://github.com/CarolinaCedro">CarolinaCedro</a></p>
+      </div>
+    </section>
+    <CardSale/>
+    </>
+    
   );
 }
 
